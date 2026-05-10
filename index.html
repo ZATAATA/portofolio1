@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubdi Marfiki Ikhsan | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Top Navigation Bar -->
+        <nav class="top-nav">
+            <!-- Brightness Control Toggle -->
+            <div class="brightness-control">
+                <button class="brightness-toggle" id="brightnessToggle" title="Brightness">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="brightness-slider-container" id="brightnessSliderContainer">
+                    <div class="brightness-value" id="brightnessValue">100%</div>
+                    <input type="range" class="brightness-slider" id="brightnessSlider" min="20" max="150" value="100">
+                    <div class="brightness-labels">
+                        <span>Dark</span>
+                        <span>Light</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a></li>
+                    <li><a href="#experience" class="nav-link" data-section="experience">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Experience</span>
+                    </a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">
+                        <i class="fas fa-code"></i>
+                        <span>Skills</span>
+                    </a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Project-E</span>
+                    </a></li>
+                    <li><a href="#creative-project" class="nav-link" data-section="creative-project">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Creative Project</span>
+                    </a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="nav-social">
+                <a href="#" class="social-circle" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- ==================== HOME SECTION ==================== -->
+            <section id="home" class="section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-greeting">Hello, I'm</p>
+                        <h1 class="hero-name">Mubdi Marfiki Ikhsan</h1>
+                        <p class="hero-subtitle">Data Analyst &middot; Software Engineer &middot; AI Enthusiast</p>
+                        <p class="hero-description">
+                            Transforming data into insights and building intelligent solutions
+                            that drive innovation and business growth.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <span>Get In Touch</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-blob"></div>
+                        <div class="floating-icons">
+                            <i class="fas fa-chart-line" data-float="1"></i>
+                            <i class="fas fa-code" data-float="2"></i>
+                            <i class="fas fa-brain" data-float="3"></i>
+                            <i class="fas fa-database" data-float="4"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== ABOUT SECTION ==================== -->
+            <section id="about" class="section">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Passionate About Data & Technology</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-paragraph">
+                            I am a dedicated <strong>Data Analyst</strong> and <strong>Software Engineer</strong>
+                            with a deep passion for artificial intelligence and machine learning. My journey
+                            in technology began with a curiosity about how data can tell stories and drive
+                            meaningful decisions.
+                        </p>
+                        <p class="about-paragraph">
+                            With expertise spanning data analysis, software development, and AI implementation,
+                            I bring a unique multidisciplinary approach to solving complex problems. I believe
+                            in creating solutions that are not only technically sound but also practical and
+                            user-friendly.
+                        </p>
+                        <p class="about-paragraph">
+                            My goal is to leverage technology to make a positive impact, whether through
+                            optimizing business processes, uncovering hidden insights in data, or building
+                            intelligent systems that enhance human capabilities.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <div class="image-placeholder">
+                                <img src="galery/profile/1.jpg" alt="Profile Photo" class="flexible-profile-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== EXPERIENCE SECTION ==================== -->
+            <section id="experience" class="section">
+                <div class="section-header">
+                    <span class="section-tag">My Journey</span>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+
+                <!-- EDUCATION Subsection -->
+                <div class="experience-subsection">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        EDUCATION
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Agustus 2021 – Agustus 2025</span>
+                                <h3 class="timeline-title">Sarjana Terapan (D4) Teknologi Rekayasa Perangkat Lunak</h3>
+                                <p class="timeline-company">Politeknik Negeri Padang | IPK: 3.65/4.00</p>
+                                <p class="timeline-description">
+                                    Jurusan ini membekali mahasiswa dengan keterampilan pengembangan perangkat lunak, manajemen proyek
+                                    digital, serta penerapan teknologi berbasis data dan AI untuk mendukung solusi bisnis modern.
+                                    Project akhir H!ireVista, project AI analisis CV untuk perusahaan.
+                                    Magang di PT TMSC, mengelola divisi GLU social media specialist.
+                                    Mengikuti Pertukaran Mahasiswa Merdeka Batch 4 di Kota Manado, Sulawesi Utara.
+                                    Mengelola Unit Kegiatan Mahasiswa (UKM) Pers Jempol Politeknik Negeri Padang.
+                                    Membuat proyek E-Gedung dengan PHP, JS, CSS, Laravel, meningkatkan efisiensi peminjaman gedung 40%.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NON-FORMAL EDUCATION Subsection -->
+                <div class="experience-subsection">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-certificate"></i>
+                        NON-FORMAL EDUCATION
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">22-26 April 2024</span>
+                                <h3 class="timeline-title">Operator Komputer Madya</h3>
+                                <p class="timeline-company">KOMINFO</p>
+                                <p class="timeline-description">
+                                    Mencapai keahlian Microsoft Office (Word, Excel, PowerPoint), meningkatkan produktivitas 30%.
+                                    Membuat laporan, Surat menyurat, mengelola data, Visualisasi data, dan membuat presentasi.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Agustus 2023 – Desember 2023</span>
+                                <h3 class="timeline-title">MSIB di Hacktiv8</h3>
+                                <p class="timeline-company">PT. Hacktivate Teknologi Indonesia</p>
+                                <p class="timeline-description">
+                                    Program Magang Studi Independen Bersertifikat dengan fokus pada pengembangan perangkat lunak dan teknologi web modern.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Agustus 2023 - Oktober 2023</span>
+                                <h3 class="timeline-title">Pelatihan Siap Kerja Coffee Roasting</h3>
+                                <p class="timeline-company">BPVP KOTA PADANG</p>
+                                <p class="timeline-description">
+                                    Menjadi roaster profesional dengan tingkat keberhasilan 90% selama 3 bulan.
+                                    Mengolah biji hijau kopi menjadi biji kopi harum, enak dan aman diseduh dalam 12 menit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WORK EXPERIENCE Subsection -->
+                <div class="experience-subsection">
+                    <h3 class="subsection-title">
+                        <i class="fas fa-briefcase"></i>
+                        WORK EXPERIENCE
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Agustus 2025 – Maret 2026</span>
+                                <h3 class="timeline-title">Social Media Specialist & Content Creator</h3>
+                                <p class="timeline-company">Muth Studio</p>
+                                <p class="timeline-description">
+                                    Mengelola kehadiran digital Muth Studio secara mandiri di TikTok dan Instagram, membangun identitas brand
+                                    'Modern & Aesthetic'.
+                                    Memproduksi konten visual yang konsisten masuk FYP TikTok dan trending Instagram, berkontribusi pada
+                                    peningkatan penjualan 60% sejak pembukaan studio.
+                                    Menggunakan Adobe Illustrator, CapCut, dan Canva untuk memproduksi konten visual yang efektif secara konversi.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Maret 2022 - Agustus 2025</span>
+                                <h3 class="timeline-title">Asisten Labor Teknologi Informasi</h3>
+                                <p class="timeline-company">Politeknik Negeri Padang</p>
+                                <p class="timeline-description">
+                                    Mengelola dan memelihara infrastruktur teknis laboratorium (hardware, software, jaringan) untuk mendukung
+                                    kegiatan akademik.
+                                    Melakukan troubleshooting dan dokumentasi teknis secara sistematis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Agustus 2024 – Januari 2025</span>
+                                <h3 class="timeline-title">Project Management dan Pimpinan Divisi Social Media Specialist (Magang)</h3>
+                                <p class="timeline-company">Abbauf Tech, TMSC</p>
+                                <p class="timeline-description">
+                                    Mengekspor dan menganalisis data performa dari TikTok Analytics dan Shopee Seller Center untuk
+                                    mengidentifikasi pola engagement dan konversi produk afiliasi.
+                                    Menyusun laporan data berbasis metrik (reach, CTR, conversion rate, GMV) dan mempresentasikan temuan
+                                    kepada manajemen untuk mendukung pengambilan keputusan strategis.
+                                    Merekomendasikan dan meyakinkan manajemen untuk mengganti konfigurasi live streaming dan portofolio
+                                    produk afiliasi berdasarkan analisis data historis rekomendasi disetujui dan diimplementasikan.
+                                    Berhasil meningkatkan audience engagement sebesar 20% melalui strategi konten berbasis data di TikTok,
+                                    Instagram, dan Shopee.
+                                    Memimpin dan mengarahkan tim social media dalam mengeksekusi rencana yang telah divalidasi secara data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SKILLS SECTION ==================== -->
+            <section id="skills" class="section">
+                <div class="section-header">
+                    <span class="section-tag">My Skills</span>
+                    <h2 class="section-title">Technologies & Expertise</h2>
+                </div>
+
+                <!-- Skills Slider Container -->
+                <div class="skills-slider-container">
+                    <button class="slider-btn prev-btn" id="skillsPrevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="skills-slider" id="skillsSlider">
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-chart-line"></i>
+                                Data Analysis
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">Python (Pandas, NumPy)</span>
+                                <span class="skill-item">Visualisasi Data</span>
+                                <span class="skill-item">Analisis Statistik Deskriptif</span>
+                                <span class="skill-item">TikTok Analytics</span>
+                                <span class="skill-item">Shopee Analytics</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-brain"></i>
+                                Machine Learning
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">Scikit-learn</span>
+                                <span class="skill-item">Modeling</span>
+                                <span class="skill-item">Prediksi Data</span>
+                                <span class="skill-item">Jupyter Notebook</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-code"></i>
+                                Programming
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">Python</span>
+                                <span class="skill-item">PHP</span>
+                                <span class="skill-item">Java</span>
+                                <span class="skill-item">HTML</span>
+                                <span class="skill-item">CSS</span>
+                                <span class="skill-item">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-database"></i>
+                                Database
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">MySQL</span>
+                                <span class="skill-item">Git / Version Control</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-palette"></i>
+                                Design & Creative
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">Figma</span>
+                                <span class="skill-item">Canva</span>
+                                <span class="skill-item">Adobe Illustrator</span>
+                                <span class="skill-item">CapCut</span>
+                                <span class="skill-item">After Effects</span>
+                                <span class="skill-item">Fotografi</span>
+                                <span class="skill-item">Videografi</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-tools"></i>
+                                Project Tools
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">Trello (Agile/Scrum)</span>
+                                <span class="skill-item">Visual Studio Code</span>
+                                <span class="skill-item">Microsoft Office</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-users"></i>
+                                Soft Skills
+                            </h3>
+                            <div class="skills-list">
+                                <span class="skill-item">Analytical Thinking</span>
+                                <span class="skill-item">Data Storytelling</span>
+                                <span class="skill-item">Kepemimpinan</span>
+                                <span class="skill-item">Komunikasi</span>
+                                <span class="skill-item">Problem Solving</span>
+                                <span class="skill-item">Adaptif</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn next-btn" id="skillsNextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Skills Indicators -->
+                <div class="skills-indicators">
+                    <span class="indicator active" data-skills-slide="0"></span>
+                    <span class="indicator" data-skills-slide="1"></span>
+                    <span class="indicator" data-skills-slide="2"></span>
+                    <span class="indicator" data-skills-slide="3"></span>
+                    <span class="indicator" data-skills-slide="4"></span>
+                    <span class="indicator" data-skills-slide="5"></span>
+                    <span class="indicator" data-skills-slide="6"></span>
+                </div>
+            </section>
+
+            <!-- ==================== PROJECTS SECTION ==================== -->
+            <section id="projects" class="section">
+                <div class="section-header">
+                    <span class="section-tag">My Projects</span>
+                    <h2 class="section-title">Project-E</h2>
+                </div>
+
+                <!-- Project Slider Container -->
+                <div class="projects-slider-container">
+                    <button class="slider-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="projects-slider" id="projectsSlider">
+                        <!-- HireVista Project -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-logo">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">HireVista</h3>
+                                <p class="project-subtitle">AI CV Analyzer</p>
+                                <p class="project-description">
+                                    Aplikasi cerdas yang menggunakan AI untuk menganalisis CV dan resume,
+                                    menyediakan screening otomatis, peringkat kandidat, dan insight
+                                    mendalam untuk recruiter. Fitur parsing NLP dan ekstraksi skill.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">OpenAI API</span>
+                                    <span class="tech-tag">FastAPI</span>
+                                    <span class="tech-tag">React</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- E-Gedung Project -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-logo">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">E-Gedung</h3>
+                                <p class="project-subtitle">Building Management System</p>
+                                <p class="project-description">
+                                    Platform manajemen gedung komprehensif untuk mengelola fasilitas,
+                                    jadwal maintenance, informasi tenant, dan tracking utilitas.
+                                    Termasuk monitoring real-time dan reporting otomatis.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Vue.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Project Indicators -->
+                <div class="project-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                </div>
+            </section>
+
+            <!-- ==================== CREATIVE PROJECT SECTION ==================== -->
+            <section id="creative-project" class="section">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Creative Project</h2>
+                </div>
+
+                <!-- Logo Design Row (1:1 aspect ratio) -->
+                <div class="creative-row">
+                    <h3 class="creative-row-title" onclick="openLogoModal()" style="cursor:pointer;">
+                        <i class="fas fa-palette"></i>
+                        Logo Design
+                    </h3>
+                    <div class="creative-slider-container">
+                        <button class="slider-btn prev-btn" id="creativeLogoPrevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="creative-slider" id="creativeLogoSlider">
+                            <div class="creative-item creative-logo" data-modal="logo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/logo/hirevista.png" alt="HireVista Logo" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>HireVista</h4>
+                                    <p>AI CV Analyzer Platform</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-logo" data-modal="logo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/logo/e-gedung.png" alt="E-Gedung Logo" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>E-Gedung</h4>
+                                    <p>Building Management System</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-logo" data-modal="logo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/logo/speranzs.jpg" alt="Speranzs Logo" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Speranzs</h4>
+                                    <p>Brand Identity Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next-btn" id="creativeLogoNextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="creative-indicators" id="creativeLogoIndicators"></div>
+                </div>
+
+                <!-- Photography Row (2:3 aspect ratio) -->
+                <div class="creative-row">
+                    <h3 class="creative-row-title" onclick="openPhotoModal()" style="cursor:pointer;">
+                        <i class="fas fa-camera"></i>
+                        Photography
+                    </h3>
+                    <div class="creative-slider-container">
+                        <button class="slider-btn prev-btn" id="creativePhotoPrevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="creative-slider" id="creativePhotoSlider">
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/1foto.jpg" alt="Portrait Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Portrait Session</h4>
+                                    <p>Professional Portrait Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/2foto.jpg" alt="Landscape Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Nature Landscape</h4>
+                                    <p>Outdoor & Nature Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/3foto.jpg" alt="Urban Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Urban Explorer</h4>
+                                    <p>City & Street Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/4foto.jpg" alt="Event Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Event Coverage</h4>
+                                    <p>Event & Ceremony Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/5foto.jpg" alt="Product Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Product Showcase</h4>
+                                    <p>Commercial Product Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/6foto.jpg" alt="Fashion Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Fashion Editorial</h4>
+                                    <p>Fashion & Style Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/7foto.jpg" alt="Architecture Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Architecture</h4>
+                                    <p>Building & Structure Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/8foto.jpg" alt="Food Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Culinary Art</h4>
+                                    <p>Food & Beverage Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/9foto.jpg" alt="Wildlife Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Wildlife Moment</h4>
+                                    <p>Nature & Wildlife Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/10foto.jpg" alt="Abstract Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Abstract Art</h4>
+                                    <p>Creative & Abstract Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/11foto.jpeg" alt="Night Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Night Lights</h4>
+                                    <p>Night & Low Light Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/12foto.jpg" alt="Macro Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Macro Detail</h4>
+                                    <p>Close-up & Macro Photography</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-photo" data-modal="photo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/photo/13foto.jpg" alt="Travel Photography" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Travel Diary</h4>
+                                    <p>Travel & Adventure Photography</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next-btn" id="creativePhotoNextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="creative-indicators" id="creativePhotoIndicators"></div>
+                </div>
+
+                <!-- Video Creative Row (4:3 aspect ratio) -->
+                <div class="creative-row">
+                    <h3 class="creative-row-title" onclick="openVideoModal()" style="cursor:pointer;">
+                        <i class="fas fa-video"></i>
+                        Video Creative
+                    </h3>
+                    <div class="creative-slider-container">
+                        <button class="slider-btn prev-btn" id="creativeVideoPrevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="creative-slider" id="creativeVideoSlider">
+                            <div class="creative-item creative-video" data-modal="video">
+                                <div class="creative-image-wrapper">
+                                    <video preload="metadata" muted loop>
+                                        <source src="galery/video/video1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Cinematic Story</h4>
+                                    <p>Cinematic Video Production</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-video" data-modal="video">
+                                <div class="creative-image-wrapper">
+                                    <video preload="metadata" muted loop>
+                                        <source src="galery/video/video2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Brand Commercial</h4>
+                                    <p>Commercial Video Production</p>
+                                </div>
+                            </div>
+                            <div class="creative-item creative-video" data-modal="video">
+                                <div class="creative-image-wrapper">
+                                    <video preload="metadata" muted loop>
+                                        <source src="galery/video/video3.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Event Highlight</h4>
+                                    <p>Event Video Production</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next-btn" id="creativeVideoNextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="creative-indicators" id="creativeVideoIndicators"></div>
+                </div>
+            </section>
+
+            <!-- ==================== CONTACT SECTION ==================== -->
+            <section id="contact" class="section">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Work Together</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p class="contact-description">
+                            I'm always interested in hearing about new projects and opportunities.
+                            Whether you have a question or just want to say hi, feel free to reach out!
+                        </p>
+                        <div class="contact-links">
+                            <a href="mailto:mubdi@example.com" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">mubdi@example.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+6281234567890" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+62 812 3456 7890</span>
+                                </div>
+                            </a>
+                            <a href="#" class="contact-link">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Indonesia</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <p style="display:none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Contact Success Toast -->
+    <div class="toast-notification" id="contactToast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <div class="toast-text">
+                <h4>Message Sent!</h4>
+                <p>Thank you for reaching out. We'll get back to you soon.</p>
+            </div>
+            <button class="toast-close" id="toastClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Photo Gallery Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Photo Gallery</h3>
+                <button class="modal-close" id="photoModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-grid" id="photoGalleryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Gallery Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Video Gallery</h3>
+                <button class="modal-close" id="videoModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-gallery-grid" id="videoGalleryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo Gallery Modal -->
+    <div class="modal" id="logoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Logo Gallery</h3>
+                <button class="modal-close" id="logoModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-grid" id="logoGalleryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
