@@ -113,19 +113,19 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            fetch('/', {
+            fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                body: formData
             })
-            .then((response) => {
-                if (response.ok) {
+            .then(async (response) => {
+                const data = await response.json();
+                if (response.ok && data.success) {
                     submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
                     submitBtn.style.background = '#22c55e';
                     contactForm.reset();
-                    showToast('Message Sent!', 'Thank you for reaching out. We will get back to you soon.', false);
+                    showToast('Message Sent!', 'Thank you for reaching out. I will get back to you soon.', false);
                 } else {
-                    throw new Error('Submission failed');
+                    throw new Error(data.message || 'Submission failed');
                 }
                 setTimeout(() => {
                     submitBtn.innerHTML = originalContent;
