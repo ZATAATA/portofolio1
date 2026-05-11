@@ -290,9 +290,11 @@ const totalSlides = projectCards.length;
     
 function updateSlider() {
     if (!projectCards.length || !projectCards[0]) return;
-    
-    const cardWidth = projectCards[0].offsetWidth + 30; // card width + gap
-    if (cardWidth === 30) return; // Card not rendered yet
+
+    const computedGap = parseInt(window.getComputedStyle(projectsSlider).gap || window.getComputedStyle(projectsSlider).columnGap);
+    const gap = isNaN(computedGap) ? 30 : computedGap;
+    const cardWidth = projectCards[0].offsetWidth + gap;
+    if (cardWidth === gap) return; // Card not rendered yet
     
     const offset = -currentSlide * cardWidth;
     projectsSlider.style.transform = `translateX(${offset}px)`;
@@ -1074,6 +1076,11 @@ function closeModal(modal) {
     document.body.style.overflow = '';
 }
 
+// Expose modal functions globally for onclick handlers
+window.openPhotoModal = openPhotoModal;
+window.openVideoModal = openVideoModal;
+window.openLogoModal = openLogoModal;
+
 // Load photo gallery
 function loadPhotoGallery() {
     photoGalleryGrid.innerHTML = '';
@@ -1323,6 +1330,111 @@ document.addEventListener('keydown', (e) => {
             closeModal(logoModal);
         }
     }
+});
+
+// ========================================
+// Read More Functionality
+// ========================================
+
+const detailModal = document.getElementById('detailModal');
+const detailModalClose = document.getElementById('detailModalClose');
+const detailModalTitle = document.getElementById('detailModalTitle');
+const detailModalSubtitle = document.getElementById('detailModalSubtitle');
+const detailModalDescription = document.getElementById('detailModalDescription');
+
+function openDetailModal(title, subtitle, description) {
+    if (detailModalTitle) detailModalTitle.textContent = title || 'Detail';
+    if (detailModalSubtitle) detailModalSubtitle.textContent = subtitle || '';
+    if (detailModalDescription) detailModalDescription.textContent = description || '';
+    if (detailModal) {
+        detailModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeDetailModal() {
+    if (detailModal) {
+        detailModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+if (detailModalClose && detailModal) {
+    detailModalClose.addEventListener('click', closeDetailModal);
+}
+
+if (detailModal) {
+    detailModal.addEventListener('click', (e) => {
+        if (e.target === detailModal) closeDetailModal();
+    });
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && detailModal && detailModal.classList.contains('active')) {
+        closeDetailModal();
+    }
+});
+
+function addReadMoreButtons() {
+    const isMobile = window.innerWidth <= 768;
+
+    // Experience timeline items
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        const desc = item.querySelector('.timeline-description');
+        const titleEl = item.querySelector('.timeline-title');
+        const companyEl = item.querySelector('.timeline-company');
+        if (!desc || !titleEl) return;
+
+        const textLength = desc.textContent.trim().length;
+        if (!isMobile && textLength <= 180) return;
+
+        // Remove existing button to avoid duplicates
+        const existingBtn = item.querySelector('.read-more-btn');
+        if (existingBtn) existingBtn.remove();
+
+        const btn = document.createElement('button');
+        btn.className = 'read-more-btn';
+        btn.innerHTML = 'Lihat Selengkapnya <i class="fas fa-chevron-right"></i>';
+        btn.type = 'button';
+        btn.addEventListener('click', () => {
+            openDetailModal(titleEl.textContent, companyEl ? companyEl.textContent : '', desc.textContent.trim());
+        });
+
+        desc.parentNode.insertBefore(btn, desc.nextSibling);
+    });
+
+    // Project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        const desc = card.querySelector('.project-description');
+        const titleEl = card.querySelector('.project-title');
+        const subtitleEl = card.querySelector('.project-subtitle');
+        if (!desc || !titleEl) return;
+
+        const textLength = desc.textContent.trim().length;
+        if (!isMobile && textLength <= 180) return;
+
+        const existingBtn = card.querySelector('.read-more-btn');
+        if (existingBtn) existingBtn.remove();
+
+        const btn = document.createElement('button');
+        btn.className = 'read-more-btn';
+        btn.innerHTML = 'Lihat Selengkapnya <i class="fas fa-chevron-right"></i>';
+        btn.type = 'button';
+        btn.addEventListener('click', () => {
+            openDetailModal(titleEl.textContent, subtitleEl ? subtitleEl.textContent : '', desc.textContent.trim());
+        });
+
+        desc.parentNode.insertBefore(btn, desc.nextSibling);
+    });
+}
+
+addReadMoreButtons();
+
+// Re-evaluate buttons on resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(addReadMoreButtons, 250);
 });
 
 // Add click listeners to section titles to open gallery modals
