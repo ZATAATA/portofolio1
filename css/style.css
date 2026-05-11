@@ -2607,7 +2607,47 @@ body {
 
 @media (max-width: 480px) {
     .creative-slider .creative-item {
-        flex: 0 0 calc(100% - 40px);
-        max-width: 350px;
+        flex: 0 0 80%;
+        max-width: none;
+        min-width: auto;
+    }
+
+    .creative-item.creative-logo .creative-image-wrapper {
+        aspect-ratio: 1 / 1;
+        max-height: 220px;
+    }
+
+    .creative-item.creative-photo .creative-image-wrapper {
+        aspect-ratio: 3 / 4;
+    }
+
+    .creative-item.creative-video .creative-image-wrapper {
+        aspect-ratio: 16 / 9;
+    }
+
+    .creative-info {
+        padding: 12px;
+    }
+
+    .creative-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .creative-info p {
+        font-size: 0.8rem;
+    }
+
+    .creative-slider-container .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .creative-slider-container .slider-btn.prev-btn {
+        left: 8px;
+    }
+
+    .creative-slider-container .slider-btn.next-btn {
+        right: 8px;
     }
 }

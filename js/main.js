@@ -1417,16 +1417,15 @@ function setupCreativeSlider(config) {
         });
     });
 
-    // If 4 or fewer items, disable sliding
-    if (totalItems <= 4) {
+    const hasFewItems = totalItems <= 4;
+    if (hasFewItems) {
         if (prevBtn) prevBtn.style.display = 'none';
         if (nextBtn) nextBtn.style.display = 'none';
         if (indicatorsContainer) indicatorsContainer.style.display = 'none';
-        return;
     }
 
-    // Generate indicators
-    if (indicatorsContainer) {
+    // Generate indicators only when more than 4 items
+    if (indicatorsContainer && !hasFewItems) {
         indicatorsContainer.innerHTML = '';
         for (let i = 0; i < totalItems; i++) {
             const span = document.createElement('span');
@@ -1446,8 +1445,10 @@ function setupCreativeSlider(config) {
 
     function updateSlider() {
         if (!items.length || !items[0]) return;
-        const itemWidth = items[0].offsetWidth + 30; // + gap
-        if (itemWidth === 30) return;
+        const computedGap = parseInt(window.getComputedStyle(slider).gap || window.getComputedStyle(slider).columnGap);
+        const gap = isNaN(computedGap) ? 30 : computedGap;
+        const itemWidth = items[0].offsetWidth + gap;
+        if (itemWidth === gap) return;
         const offset = -currentSlide * itemWidth;
         slider.style.transform = `translateX(${offset}px)`;
 
@@ -1536,7 +1537,9 @@ function setupCreativeSlider(config) {
 
     setTimeout(() => {
         updateSlider();
-        startAuto();
+        if (!hasFewItems) {
+            startAuto();
+        }
     }, 100);
 }
 
