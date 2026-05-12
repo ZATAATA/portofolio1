@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="galery/logo/marfiki_2.png" type="image/png">
     <title>Mubdi Marfiki Ikhsan | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,50 +13,43 @@
     <div class="app">
         <!-- Top Navigation Bar -->
         <nav class="top-nav">
-            <!-- Brightness Control Toggle -->
-            <div class="brightness-control">
-                <button class="brightness-toggle" id="brightnessToggle" title="Brightness">
-                    <i class="fas fa-sun"></i>
+
+            <!-- Language Toggle -->
+            <div class="language-control">
+                <button class="language-toggle" id="languageToggle" title="Switch Language">
+                    <span id="currentLang">ID</span>
                 </button>
-                <div class="brightness-slider-container" id="brightnessSliderContainer">
-                    <div class="brightness-value" id="brightnessValue">100%</div>
-                    <input type="range" class="brightness-slider" id="brightnessSlider" min="20" max="150" value="100">
-                    <div class="brightness-labels">
-                        <span>Dark</span>
-                        <span>Light</span>
-                    </div>
-                </div>
             </div>
 
             <div class="nav-center">
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link active" data-section="home">
                         <i class="fas fa-home"></i>
-                        <span>Home</span>
+                        <span data-lang="nav-home">Home</span>
                     </a></li>
                     <li><a href="#about" class="nav-link" data-section="about">
                         <i class="fas fa-user"></i>
-                        <span>About</span>
+                        <span data-lang="nav-about">About</span>
                     </a></li>
                     <li><a href="#experience" class="nav-link" data-section="experience">
                         <i class="fas fa-briefcase"></i>
-                        <span>Experience</span>
+                        <span data-lang="nav-experience">Experience</span>
                     </a></li>
                     <li><a href="#skills" class="nav-link" data-section="skills">
                         <i class="fas fa-code"></i>
-                        <span>Skills</span>
+                        <span data-lang="nav-skills">Skills</span>
                     </a></li>
                     <li><a href="#projects" class="nav-link" data-section="projects">
                         <i class="fas fa-folder-open"></i>
-                        <span>Project-E</span>
+                        <span data-lang="nav-projects">Project-E</span>
                     </a></li>
                     <li><a href="#creative-project" class="nav-link" data-section="creative-project">
                         <i class="fas fa-layer-group"></i>
-                        <span>Creative Project</span>
+                        <span data-lang="nav-creative">Creative Project</span>
                     </a></li>
                     <li><a href="#contact" class="nav-link" data-section="contact">
                         <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
+                        <span data-lang="nav-contact">Contact</span>
                     </a></li>
                 </ul>
             </div>
@@ -525,13 +519,22 @@
                 <div class="creative-row">
                     <h3 class="creative-row-title" onclick="openLogoModal()" style="cursor:pointer;">
                         <i class="fas fa-palette"></i>
-                        Logo Design
+                        <span data-lang="creative-logo">Logo Design</span>
                     </h3>
                     <div class="creative-slider-container">
                         <button class="slider-btn prev-btn" id="creativeLogoPrevBtn">
                             <i class="fas fa-chevron-left"></i>
                         </button>
                         <div class="creative-slider" id="creativeLogoSlider">
+                            <div class="creative-item creative-logo" data-modal="logo">
+                                <div class="creative-image-wrapper">
+                                    <img src="galery/logo/marfiki_1.png" alt="Marfiki Personal Branding" loading="lazy">
+                                </div>
+                                <div class="creative-info">
+                                    <h4>Marfiki</h4>
+                                    <p>Personal Branding</p>
+                                </div>
+                            </div>
                             <div class="creative-item creative-logo" data-modal="logo">
                                 <div class="creative-image-wrapper">
                                     <img src="galery/logo/hirevista.png" alt="HireVista Logo" loading="lazy">
@@ -571,7 +574,7 @@
                 <div class="creative-row">
                     <h3 class="creative-row-title" onclick="openPhotoModal()" style="cursor:pointer;">
                         <i class="fas fa-camera"></i>
-                        Photography
+                        <span data-lang="creative-photo">Photography</span>
                     </h3>
                     <div class="creative-slider-container">
                         <button class="slider-btn prev-btn" id="creativePhotoPrevBtn">
@@ -707,7 +710,7 @@
                 <div class="creative-row">
                     <h3 class="creative-row-title" onclick="openVideoModal()" style="cursor:pointer;">
                         <i class="fas fa-video"></i>
-                        Video Creative
+                        <span data-lang="creative-video">Video Creative</span>
                     </h3>
                     <div class="creative-slider-container">
                         <button class="slider-btn prev-btn" id="creativeVideoPrevBtn">
@@ -759,8 +762,8 @@
             <!-- ==================== CONTACT SECTION ==================== -->
             <section id="contact" class="section">
                 <div class="section-header">
-                    <span class="section-tag">Get In Touch</span>
-                    <h2 class="section-title">Let's Work Together</h2>
+                    <span class="section-tag" data-lang="section-contact">Get In Touch</span>
+                    <h2 class="section-title" data-lang="contact-title">Let's Work Together</h2>
                 </div>
                 <div class="contact-content">
                     <div class="contact-info">
@@ -802,22 +805,22 @@
                         <input type="hidden" name="access_key" value="f27982c9-3145-41d4-8df2-40a64be66158" />
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            <label for="name">Your Name</label>
+                            <label for="name" data-lang="contact-name">Your Name</label>
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            <label for="email">Your Email</label>
+                            <label for="email" data-lang="contact-email">Your Email</label>
                         </div>
                         <div class="form-group">
                             <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            <label for="subject">Subject</label>
+                            <label for="subject" data-lang="contact-subject">Subject</label>
                         </div>
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-                            <label for="message">Your Message</label>
+                            <label for="message" data-lang="contact-message">Your Message</label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit">
-                            <span>Send Message</span>
+                            <span data-lang="contact-send">Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>

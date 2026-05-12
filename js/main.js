@@ -16,11 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const mainContent = document.querySelector('.main-content');
 
-    // Brightness Control Elements
-    const brightnessToggle = document.getElementById('brightnessToggle');
-    const brightnessSliderContainer = document.getElementById('brightnessSliderContainer');
-    const brightnessSlider = document.getElementById('brightnessSlider');
-    const brightnessValue = document.getElementById('brightnessValue');
+    // Language Control Elements
+    const languageToggle = document.getElementById('languageToggle');
+    const currentLangSpan = document.getElementById('currentLang');
 
     // Scroll to top immediately on load
     if (mainContent) {
@@ -223,57 +221,94 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
-    // Brightness Control
+    // Language Control
     // ========================================
-    
-    let brightnessSliderOpen = false;
-    
-    // Toggle brightness slider visibility
-    if (brightnessToggle) {
-        brightnessToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            brightnessSliderOpen = !brightnessSliderOpen;
-            brightnessSliderContainer.classList.toggle('active', brightnessSliderOpen);
-        });
-    }
-    
-    // Close slider when clicking outside
-    document.addEventListener('click', (e) => {
-        if (brightnessSliderOpen && !brightnessSliderContainer.contains(e.target) && !brightnessToggle.contains(e.target)) {
-            brightnessSliderOpen = false;
-            brightnessSliderContainer.classList.remove('active');
+
+    let currentLanguage = 'id'; // Default to Indonesian
+
+    // Translation dictionary
+    const translations = {
+        id: {
+            'nav-home': 'Beranda',
+            'nav-about': 'Tentang',
+            'nav-experience': 'Pengalaman',
+            'nav-skills': 'Keahlian',
+            'nav-projects': 'Proyek',
+            'nav-creative': 'Kreatif',
+            'nav-contact': 'Kontak',
+            'hero-title': 'Halo, Saya',
+            'hero-subtitle': 'Frontend Developer & Creative Designer',
+            'hero-btn-projects': 'Lihat Proyek',
+            'hero-btn-contact': 'Hubungi Saya',
+            'section-about': 'Tentang Saya',
+            'section-experience': 'Pengalaman',
+            'section-skills': 'Keahlian',
+            'section-projects': 'Proyek',
+            'section-creative': 'Proyek Kreatif',
+            'section-contact': 'Kontak',
+            'contact-title': 'Mari Bekerja Sama',
+            'contact-name': 'Nama Anda',
+            'contact-email': 'Email Anda',
+            'contact-subject': 'Subjek',
+            'contact-message': 'Pesan',
+            'contact-send': 'Kirim Pesan',
+            'creative-logo': 'Desain Logo',
+            'creative-photo': 'Fotografi',
+            'creative-video': 'Video Kreatif'
+        },
+        en: {
+            'nav-home': 'Home',
+            'nav-about': 'About',
+            'nav-experience': 'Experience',
+            'nav-skills': 'Skills',
+            'nav-projects': 'Projects',
+            'nav-creative': 'Creative',
+            'nav-contact': 'Contact',
+            'hero-title': 'Hi, I\'m',
+            'hero-subtitle': 'Frontend Developer & Creative Designer',
+            'hero-btn-projects': 'View Projects',
+            'hero-btn-contact': 'Contact Me',
+            'section-about': 'About Me',
+            'section-experience': 'Experience',
+            'section-skills': 'Skills',
+            'section-projects': 'Projects',
+            'section-creative': 'Creative Projects',
+            'section-contact': 'Contact',
+            'contact-title': 'Let\'s Work Together',
+            'contact-name': 'Your Name',
+            'contact-email': 'Your Email',
+            'contact-subject': 'Subject',
+            'contact-message': 'Message',
+            'contact-send': 'Send Message',
+            'creative-logo': 'Logo Design',
+            'creative-photo': 'Photography',
+            'creative-video': 'Video Creative'
         }
-    });
-    
-    // Prevent slider clicks from closing
-    if (brightnessSliderContainer) {
-        brightnessSliderContainer.addEventListener('click', (e) => {
-            e.stopPropagation();
+    };
+
+    // Toggle language
+    if (languageToggle) {
+        languageToggle.addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'id' ? 'en' : 'id';
+            if (currentLangSpan) {
+                currentLangSpan.textContent = currentLanguage.toUpperCase();
+            }
+            updateLanguage();
         });
     }
-    
-    // Update brightness value and filter
-    if (brightnessSlider && brightnessValue) {
-        brightnessSlider.addEventListener('input', (e) => {
-            const value = e.target.value;
-            brightnessValue.textContent = value + '%';
-            document.documentElement.style.setProperty('--brightness', value + '%');
-            
-            // Update theme based on brightness
-            if (value > 100) {
-                document.body.setAttribute('data-theme', 'light');
-                brightnessToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            } else if (value < 80) {
-                document.body.removeAttribute('data-theme');
-                brightnessToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            } else {
-                // Mid brightness - keep current theme
+
+    // Update all translatable elements
+    function updateLanguage() {
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (translations[currentLanguage][key]) {
+                el.textContent = translations[currentLanguage][key];
             }
         });
-        
-        // Initialize brightness
-        document.documentElement.style.setProperty('--brightness', brightnessSlider.value + '%');
     }
+
+    // Initialize language
+    updateLanguage();
 
 // ========================================
 // Project Slider
@@ -1046,7 +1081,7 @@ const videoFiles = [
 ];
 
 const logoFiles = [
-    'hirevista.png', 'e-gedung.png', 'speranzs.jpg'
+    'marfiki_1.png', 'hirevista.png', 'e-gedung.png', 'speranzs.jpg'
 ];
 
 // Open photo modal
