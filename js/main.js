@@ -236,25 +236,54 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav-projects': 'Proyek',
             'nav-creative': 'Kreatif',
             'nav-contact': 'Kontak',
-            'hero-title': 'Halo, Saya',
-            'hero-subtitle': 'Frontend Developer & Creative Designer',
+            'hero-greeting': 'Halo, saya',
+            'hero-subtitle': 'Data Analyst & Software Engineer & AI Enthusiast',
+            'hero-description': 'Mengubah data menjadi wawasan dan membangun solusi cerdas yang mendorong inovasi dan pertumbuhan bisnis.',
             'hero-btn-projects': 'Lihat Proyek',
             'hero-btn-contact': 'Hubungi Saya',
-            'section-about': 'Tentang Saya',
-            'section-experience': 'Pengalaman',
-            'section-skills': 'Keahlian',
-            'section-projects': 'Proyek',
-            'section-creative': 'Proyek Kreatif',
-            'section-contact': 'Kontak',
+            'section-about-tag': 'Tentang Saya',
+            'section-about-title': 'Bergairah Tentang Data & Teknologi',
+            'about-para-1': 'Saya adalah <strong>Data Analyst</strong> dan <strong>Software Engineer</strong> yang berdedikasi dengan hasrat mendalam terhadap kecerdasan buatan dan pembelajaran mesin. Perjalanan saya dalam teknologi dimulai dengan rasa ingin tahu tentang bagaimana data dapat bercerita dan mendorong keputusan yang bermakna.',
+            'about-para-2': 'Dengan keahlian yang mencakup analisis data, pengembangan perangkat lunak, dan implementasi AI, saya membawa pendekatan multidisiplin yang unik untuk memecahkan masalah kompleks. Saya percaya dalam menciptakan solusi yang tidak hanya secara teknis sound tetapi juga praktis dan user-friendly.',
+            'about-para-3': 'Tujuan saya adalah memanfaatkan teknologi untuk membuat dampak positif, baik melalui mengoptimalkan proses bisnis, mengungkap wawasan tersembunyi dalam data, atau membangun sistem cerdas yang meningkatkan kemampuan manusia.',
+            'stat-years': 'Tahun Pengalaman',
+            'stat-projects': 'Proyek Selesai',
+            'stat-clients': 'Klien Bahagia',
+            'section-experience-tag': 'Perjalanan Saya',
+            'section-experience-title': 'Pengalaman',
+            'subsection-education': 'PENDIDIKAN',
+            'subsection-nonformal': 'PENDIDIKAN NON-FORMAL',
+            'subsection-work': 'PENGALAMAN KERJA',
+            'section-skills-tag': 'Keahlian Saya',
+            'section-skills-title': 'Teknologi & Keahlian',
+            'section-projects-tag': 'Proyek Saya',
+            'section-projects-title': 'Project-E',
+            'section-creative-tag': 'Portofolio',
+            'section-creative-title': 'Proyek Kreatif',
+            'section-contact': 'Hubungi Saya',
             'contact-title': 'Mari Bekerja Sama',
+            'contact-description': 'Saya selalu tertarik mendengar tentang proyek dan peluang baru. Baik Anda memiliki pertanyaan atau hanya ingin menyapa, jangan ragu untuk menghubungi!',
+            'contact-label-email': 'Email',
+            'contact-label-phone': 'Telepon',
+            'contact-label-location': 'Lokasi',
             'contact-name': 'Nama Anda',
             'contact-email': 'Email Anda',
             'contact-subject': 'Subjek',
-            'contact-message': 'Pesan',
+            'contact-message': 'Pesan Anda',
             'contact-send': 'Kirim Pesan',
+            'contact-name-placeholder': 'Nama Anda',
+            'contact-email-placeholder': 'Email Anda',
+            'contact-subject-placeholder': 'Subjek',
+            'contact-message-placeholder': 'Pesan Anda',
             'creative-logo': 'Desain Logo',
             'creative-photo': 'Fotografi',
-            'creative-video': 'Video Kreatif'
+            'creative-video': 'Video Kreatif',
+            'toast-success-title': 'Pesan Terkirim!',
+            'toast-success-message': 'Terima kasih telah menghubungi. Kami akan segera menghubungi Anda.',
+            'modal-photo-title': 'Galeri Foto',
+            'modal-video-title': 'Galeri Video',
+            'modal-logo-title': 'Galeri Logo',
+            'modal-detail-title': 'Detail'
         },
         en: {
             'nav-home': 'Home',
@@ -264,25 +293,54 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav-projects': 'Projects',
             'nav-creative': 'Creative',
             'nav-contact': 'Contact',
-            'hero-title': 'Hi, I\'m',
-            'hero-subtitle': 'Frontend Developer & Creative Designer',
+            'hero-greeting': 'Hello, I\'m',
+            'hero-subtitle': 'Data Analyst & Software Engineer & AI Enthusiast',
+            'hero-description': 'Transforming data into insights and building intelligent solutions that drive innovation and business growth.',
             'hero-btn-projects': 'View Projects',
-            'hero-btn-contact': 'Contact Me',
-            'section-about': 'About Me',
-            'section-experience': 'Experience',
-            'section-skills': 'Skills',
-            'section-projects': 'Projects',
-            'section-creative': 'Creative Projects',
-            'section-contact': 'Contact',
+            'hero-btn-contact': 'Get In Touch',
+            'section-about-tag': 'About Me',
+            'section-about-title': 'Passionate About Data & Technology',
+            'about-para-1': 'I am a dedicated <strong>Data Analyst</strong> and <strong>Software Engineer</strong> with a deep passion for artificial intelligence and machine learning. My journey in technology began with a curiosity about how data can tell stories and drive meaningful decisions.',
+            'about-para-2': 'With expertise spanning data analysis, software development, and AI implementation, I bring a unique multidisciplinary approach to solving complex problems. I believe in creating solutions that are not only technically sound but also practical and user-friendly.',
+            'about-para-3': 'My goal is to leverage technology to make a positive impact, whether through optimizing business processes, uncovering hidden insights in data, or building intelligent systems that enhance human capabilities.',
+            'stat-years': 'Years Experience',
+            'stat-projects': 'Projects Completed',
+            'stat-clients': 'Happy Clients',
+            'section-experience-tag': 'My Journey',
+            'section-experience-title': 'Experience',
+            'subsection-education': 'EDUCATION',
+            'subsection-nonformal': 'NON-FORMAL EDUCATION',
+            'subsection-work': 'WORK EXPERIENCE',
+            'section-skills-tag': 'My Skills',
+            'section-skills-title': 'Technologies & Expertise',
+            'section-projects-tag': 'My Projects',
+            'section-projects-title': 'Project-E',
+            'section-creative-tag': 'Portfolio',
+            'section-creative-title': 'Creative Project',
+            'section-contact': 'Get In Touch',
             'contact-title': 'Let\'s Work Together',
+            'contact-description': 'I\'m always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!',
+            'contact-label-email': 'Email',
+            'contact-label-phone': 'Phone',
+            'contact-label-location': 'Location',
             'contact-name': 'Your Name',
             'contact-email': 'Your Email',
             'contact-subject': 'Subject',
-            'contact-message': 'Message',
+            'contact-message': 'Your Message',
             'contact-send': 'Send Message',
+            'contact-name-placeholder': 'Your Name',
+            'contact-email-placeholder': 'Your Email',
+            'contact-subject-placeholder': 'Subject',
+            'contact-message-placeholder': 'Your Message',
             'creative-logo': 'Logo Design',
             'creative-photo': 'Photography',
-            'creative-video': 'Video Creative'
+            'creative-video': 'Video Creative',
+            'toast-success-title': 'Message Sent!',
+            'toast-success-message': 'Thank you for reaching out. We\'ll get back to you soon.',
+            'modal-photo-title': 'Photo Gallery',
+            'modal-video-title': 'Video Gallery',
+            'modal-logo-title': 'Logo Gallery',
+            'modal-detail-title': 'Detail'
         }
     };
 
@@ -302,7 +360,20 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('[data-lang]').forEach(el => {
             const key = el.getAttribute('data-lang');
             if (translations[currentLanguage][key]) {
-                el.textContent = translations[currentLanguage][key];
+                // Use innerHTML for elements that may contain HTML tags
+                if (translations[currentLanguage][key].includes('<')) {
+                    el.innerHTML = translations[currentLanguage][key];
+                } else {
+                    el.textContent = translations[currentLanguage][key];
+                }
+            }
+        });
+
+        // Update placeholder attributes
+        document.querySelectorAll('[data-placeholder-lang]').forEach(el => {
+            const key = el.getAttribute('data-placeholder-lang');
+            if (translations[currentLanguage][key]) {
+                el.setAttribute('placeholder', translations[currentLanguage][key]);
             }
         });
     }
